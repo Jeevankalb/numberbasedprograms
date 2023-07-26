@@ -1,0 +1,48 @@
+package logicalprograms;
+import java.util.Scanner;
+
+
+// strong number  = sum of factorial of each digit is equal to the number then i is a strong number
+// 145 = 1! 4! 5!
+//       1 + 4*3*2*1 + 5*4*3*2*1
+//       1 + 24 + 120  = 145  
+//  
+//  n should be greater (n>0)
+//fetch last digit r = n%10
+//take fact inside to get updated bcoz [we have to calculate (sum = factors) if (sum = fact)  then its i strong number]
+//then remender should be > 0     and calculate the fact  and   (r --)
+//remove the last digit by n = n/10 
+// if (num == temp) then it is strong orelse it is not a spy number
+
+
+public class Strong_number {
+	public static void main(String args[]) {
+		System.out.println("Enter a number");
+		Scanner sc = new Scanner(System.in);
+		int sum =0;
+		int n= sc.nextInt();
+		int temp =n;
+		
+		
+		
+		while(n>0) {        
+			int r =n%10;
+			int fact =1;
+			
+			while(r>0) {
+				fact = fact *r;
+				r --;
+			}
+			sum = sum +fact;
+			n =n/10;
+		}
+		if(sum == temp) {
+			System.out.println("its is strong number");
+		}else {
+			System.out.println("it is not a strong number");
+		}
+		
+		
+	}
+
+}

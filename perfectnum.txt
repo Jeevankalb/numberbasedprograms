@@ -1,0 +1,40 @@
+package logicalprograms;
+import java.util.Scanner;
+
+public class perfectnumber { 
+	
+//	6 = 1 , 2, 3 this are divisors 
+//	if 1+2+3 = 6 then this is known an perfect number 
+//	 sum = number -----(logic)
+	
+	public static void main(String args[]) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter any number");
+		
+		int n =sc.nextInt();
+		int sum =0;
+		
+//		  here i<n should be there bcoz wwe want only divisor till that number 
+//		except that number   eg = 6 = 1,2,3  
+		
+		for(int i=1;i<n;i++) 
+		{
+			if(n%i==0)
+				sum = sum +i;
+		}
+			
+		if(sum == n) {
+				System.out.println("it is perfect number");
+			}else {
+				System.out.println("not a perfect number");
+			}
+		}
+		
+		
+	}
+	
+	
+	
+	
+
+

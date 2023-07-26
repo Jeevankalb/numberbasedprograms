@@ -1,0 +1,37 @@
+package logicalprograms;
+import java.util.Scanner;
+//0^2 = 0
+//9^2 = 81 
+//8 + 1 = 9    ////so we can say that square of a number is equal to the addition of square is
+//                 same to that number then it is neonn number
+//only 3 neon number are there ( 0,1,9)
+// sq>0
+//ftech last digit = r = n%10;
+//then calculate sum 
+// then calculate quotient if square  == sq /10
+//  if sum ==n then it is neon 
+public class NEON_NUMBER {
+	public static boolean neon(int n) {
+		int sum =0;
+		int sq = n*n;
+		while(sq>0) {
+			int r = sq %10;
+			sum = sum +r;
+			sq = sq/10;
+		}
+		if(sum == n) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public static void main(String args[]) {
+		System.out.println("Enter any number");
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		System.out.println(neon(n));
+	}
+	
+
+}

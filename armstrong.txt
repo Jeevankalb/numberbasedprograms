@@ -1,0 +1,49 @@
+package logicalprograms;
+import java.util.Scanner;
+
+public class ARMSTRONG_NUMB {
+//	153 = 1^3 + 5^3 + 3^3 
+//	    1 + 127 + 27 =153
+//	
+//	the sum of all the number is eqqual to  actual number thenn it is armstrong
+//	
+//	
+//	
+	public   boolean isarmstrong(int z) {
+		
+		
+	
+		int count =0;
+		int sum =0;
+		while(z>0)
+		{
+			z =z/10;
+			count ++;
+		}
+		while(z>0) {
+			int r = z%10;
+			int pro =1;
+			for( int i =1 ;i<=count;i++) {
+				pro =pro *r;
+			}sum = sum + r;
+			z=z/10;
+		}
+		if(sum == z) {
+			return true;
+		}else {
+			return false;
+		}
+		
+		
+	}
+	public static void main(String args[]) {
+		System.out.println("Enter any Number");
+		Scanner sc =new Scanner(System.in);
+		ARMSTRONG_NUMB  A = new ARMSTRONG_NUMB();
+		int z =sc.nextInt();
+		A.isarmstrong(z);
+		
+	}
+		
+	
+}

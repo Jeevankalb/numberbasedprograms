@@ -1,0 +1,38 @@
+package logicalprograms;
+import java.util.Scanner;
+
+public class ARMSTRONG_NUMBER {
+	public static void main(String args[]) {
+		
+//		logic: sum of product of the number is equal to the original number 
+//		then it is armstrong		
+//		153 = 1*1*1 + 5*5*5 + 3*3*3 =153
+		
+//		1. take temp value for n
+//		2. fetch last digit of  = n%10;
+//		3. pro = pro + ( ld * ld * ld)
+//		4. store remaning value in n = n/10;
+		
+		System.out.println("Enter any 3 digit  number");
+		
+		Scanner sc=new Scanner(System.in);
+		int x = sc.nextInt();
+		int temp =x;
+		int arm =0;
+		
+//		while condition X<0
+		while(x>0) {
+			int r = x % 10;
+			arm = arm + (r*r*r);
+			x = x/10;
+		}
+		if (temp == arm)
+			System.out.println("Armstrong number  ");
+			
+		else {
+			System.out.println("not armstrong ");
+		}
+		
+	}
+
+}

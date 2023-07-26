@@ -1,0 +1,27 @@
+package logicalprograms;
+import java.util.Scanner;
+public class reversenumber {
+	
+//	 123 =321  
+//	logic   fetch last digit    int r =n%10;
+//			then print remender  syso(r);
+//			then store all remaining value in 'n' =n = n/10 
+	
+	public static void main(String args []) {
+		System.out.println("Enter any value");
+		Scanner sc =new Scanner(System.in);
+		
+		int x = sc.nextInt();
+		
+		
+		while(x>0) {
+			int r = x%10;
+			 System.out.print(r);
+			x = x/10;
+			
+		}
+		
+		
+	}
+
+}
